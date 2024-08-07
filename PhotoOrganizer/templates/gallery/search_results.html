@@ -1,0 +1,10 @@
+<form action="{% url 'image_search'%}" method="get">
+    <input type="text" name="query" placeholder="Search tags">
+    <button type="submit">Search</button>
+</form>
+
+{% for image in images%}
+<div>
+    <img src="{{image.image.url}}" alt="Image">
+</div>
+{%endfor%}
